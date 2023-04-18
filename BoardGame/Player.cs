@@ -7,7 +7,6 @@ namespace BoardGame
         public string Nickname { get; set; }
         public int CurrentAge { get; set; }
         public List<Game> Games { get; set; } = new List<Game>();
-        private readonly Pub _pub = new Pub();
 
         public Player(string nickname, int currentAge)
         {

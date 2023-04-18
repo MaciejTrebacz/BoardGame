@@ -21,6 +21,7 @@ namespace BoardGame
                 case StoryTelling storyTelling:
                     if (!AlreadyGameInLocation(game))
                     {
+                        players.ForEach(x=>x.AddGame(game));
                         storyTelling.Play(players);
                         InMotion(game);
                     }
@@ -31,6 +32,7 @@ namespace BoardGame
                     break;
                 default:
                     game.Play(players);
+                    players.ForEach(x => x.AddGame(game));
                     InMotion(game);
                     break;
             }    
